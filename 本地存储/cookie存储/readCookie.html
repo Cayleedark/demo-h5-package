@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>读取cookie</title>
+</head>
+<body>
+    <script>
+        // 读取cookies
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return (arr[2]);
+            else
+                return null;
+        }
+
+        // 页面加载完毕后从cookie里读取值并填入相应的标签内
+        window.onload = function () {
+            document.write("用户名：" + getCookie("user")+"\n密码："+getCookie("pwd")+"\n记住"+getCookie("remember"));
+        }
+    </script>
+</body>
+</html>

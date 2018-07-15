@@ -8,50 +8,52 @@
     <title>添加删除标签</title>
 </head>
 <style>
-    #tag span {
-        padding: 5px 10px;
-        border-radius: 5px;
-        margin: 10px;
-        color: #ffffff;
-    }
-
-    #tag span:nth-child(2n+1) {
-        background-color: #fd3000;
-    }
-
-    #tag span:nth-child(2n) {
-        background-color: #fd9000;
-    }
-
-    #tag,#add-tag {
+    #tagsShow{
         border: 1px solid #000000;
         padding: 10px;
+    }
+    #tagsShow span{
+        padding: 5px 10px;
+        color: #fff;
+        margin: 3px;
+        border-radius: 6px;
+    }
+    #tagsShow span:after{
+        content: 'X';
+        color: #00ffe9;
+        font-weight: bold;
+        margin-left: 12px;
+        font-size: 20px;
+    }
+    #tagsShow span:nth-child(2n+1){
+        background-color: #000fdf;
+    }
+    #tagsShow span:nth-child(2n){
+        background-color: #fd3300;
     }
 </style>
 <body>
 
-<div id="tag"></div>
+<input type="text" value="美丽,大方,典雅,666" id="tag" placeholder="请以','隔开来添加标签">
+<input type="button" value="添加" id="btn">
+<div id="tagsShow"></div>
 
-<div id="add-tag"></div>
 
 <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
-<script>
-    var arr = ["标签1", "标签2", "标签3", "标签4", "标签5", "标签6", "标签7", "标签8", "标签9", "标签10", "标签11", "标签12"];
-    var newArr = [];
 
+<script type="text/javascript">
 
-
-    $.each(arr, function (index, value) {
-        // console.log("下标：" + index + "，值：" + value);
-        $("#tag").html("<span>"+value+"</span>") ;
-        newArr.push(value);
-    });
-
-    $.each(newArr, function (index, value) {
-        // console.log("下标：" + index + "，值：" + value);
-        $("#add-tag").append(value);
+    $("#btn").click(function () {
+        let tags = $("#tag").val().split(",");
+        $.each(tags,function (index,value) {
+            console.log(value)
+            $('#tagsShow').append("<span>"+value+"</span>");
+        })
     })
-
+    $("#tagsShow span:after").click(function () {
+        alert(123);
+    })
 </script>
+
 </body>
 </html>

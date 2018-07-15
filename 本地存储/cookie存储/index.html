@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>cookie本地存储</title>
+</head>
+
+<body>
+
+    <form action="">
+        用户名：
+        <input type="text" id="username" value="" /> 密码：
+        <input type="password" id="userpassword" value="" />
+        <input type="checkbox" id="remember" onclick="rememberValue(this)">
+        <label for="remember">记住账号密码</label>
+    </form>
+
+    <script>
+        //JS操作cookies方法!
+        
+        // cookie若不设置过期时间关闭浏览器后会总动清楚数据
+        // 存储限制4k
+
+        //设置cookies
+        /**
+         * c_name: 给你的cookie起一个独一无二的名字
+         * c_value: 获取表单标签的内容
+         * exdays: 设置保存时间  0时为删除
+         */
+        /**
+         * cookie用字符串拼接即可
+         * cookie后可接
+         * ; path=path
+         * ; domain=domain
+         * ; secure
+         */
+        function setCookie(c_name, c_value, exdays) {
+            document.cookie = c_name + "=" + encodeURIComponent(c_value) + "; max-age=" + (exdays*60*60*24);// 解决符号转码
+        }
+
+        // 读取cookies
+        function getCookie(c_name) {
+            var name = c_name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = decodeURIComponent(ca[i].trim());// 解码
+                if (c.indexOf(name) == 0){
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        // 使用示例
+        var username = document.getElementById("username"); // 获取input username
+        var userpwd = document.getElementById("userpassword"); // 获取input userpassword
+        var remember = document.getElementById("remember"); // 获取记住账号密码
+
+        // 点击复选框记住 账号、密码、复选框
+        function rememberValue() {
+            if (remember.checked == true) {
+                setCookie('user', username.value);
+                setCookie('pwd', userpwd.value, 30);
+                setCookie('remember', remember.checked, 30);
+            } else {
+                setCookie("user","",0);
+                setCookie("pwd","",0);
+                setCookie("remember","",0);
+            }
+        }
+
+        // 页面加载完毕后从cookie里读取值并填入相应的标签内
+        window.onload = function () {
+            username.value = getCookie("user");
+            userpwd.value = getCookie("pwd");
+            remember.checked = getCookie("remember");
+        }
+
+    </script>
+</body>
+
+</html>
