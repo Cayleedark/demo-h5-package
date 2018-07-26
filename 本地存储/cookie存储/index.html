@@ -62,7 +62,7 @@
         // 点击复选框记住 账号、密码、复选框
         function rememberValue() {
             if (remember.checked == true) {
-                setCookie('user', username.value);
+                setCookie('user', username.value);// 临时
                 setCookie('pwd', userpwd.value, 30);
                 setCookie('remember', remember.checked, 30);
             } else {
