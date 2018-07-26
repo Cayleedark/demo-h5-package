@@ -1,6 +1,4 @@
-# demo-h5-package
-
-### 常见的H5小功能封装
+# H5 功能封装 DEMO
 
 <ol style="color:#0fffff">
     <li>jQuer插件满屏气泡飘落动画效果</li>
