@@ -23,3 +23,10 @@
     <li>获取浏览器可视区域宽高</li>
     <li>获取浏览器滚动距离</li>
 </ol>
+
+<ul>
+	<li>canvas验证码</li>
+	<li>loading加载</li>
+	<li>wangEditor</li>
+	<li>本地存储</li>
+</ul>
