@@ -1,7 +1,4 @@
 
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
 
 /**
  * 滚动条
@@ -17,103 +14,6 @@
         alert('已经到顶了！');
     }
 });
-*/
-
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/**
- * 获取浏览器可视区域宽度
- */
-/*function getViewPortOffset() {
-    if (window.innerWidth) {
-        return {
-            w: window.innerWidth,
-            h: window.innerHeight
-        }
-    } else if (document.compatMode = "BackCompat") {
-        return {
-            w: document.body.clientWidth,
-            h: document.body.clientHeigth
-        }
-    } else {
-        return {
-            w: document.documentElement.clientWidth,
-            h: document.documentElement.clientHeight
-        }
-    }
-}*/
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/**
- * 获取浏览器滚动距离
- */
-/*
-function getScrollOffset() {
-    if (window.pageXOffset) {
-        return {
-            w: window.pageXOffset,
-            h: window.pageYOffset
-        }
-    } else {
-        return {
-            w: document.body.scrollLeft + document.documentElement.scrollLeft,
-            h: document.body.scrollTop + document.documentElement.scrollTop
-        }
-    }
-}*/
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/**
- * 获取元素尺寸宽高
- */
-/*
-Element.prototype.getElementOffset = function () {
-    var objData = this.getBoundingClientRect();
-    if (objData.width) {
-        return {
-            w: objData.width,
-            h: objData.height
-        }
-    } else {
-        return {
-            w: objData.right - objData.left,
-            h: objData.top - objData.bottom
-        }
-    }
-}
-*/
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/**
- * 获取元素相对于浏览器的left和top值
- */
-/*
-Element.prototype.getElementPosition = function () {
-    var x = 0,
-        y = 0,
-        ele = this;
-    while (ele != document.body) {
-        x += ele.scrollLeft;
-        y += ele.scrollTop;
-        ele = ele.offsetParent;
-    }
-    return {
-        x: x,
-        y: y
-    }
-}
 */
 
 

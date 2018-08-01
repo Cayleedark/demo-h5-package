@@ -1,4 +1,4 @@
-# H5 功能封装 DEMO
+﻿# H5 功能封装 DEMO
 
 <ol style="color:#0fffff">
     <li>jQuer插件满屏气泡飘落动画效果</li>
@@ -15,4 +15,5 @@
     <li>纯css抖动效果</li>
     <li>结合vue百度天气</li>
     <li>随机颜色</li>
+    <li>无重复随机字符串</li>
 </ol>
