@@ -8,13 +8,21 @@
 </head>
 <body>
     <script>
-        // 读取cookies
-        function getCookie(name) {
-            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
-            if (arr = document.cookie.match(reg))
-                return (arr[2]);
-            else
-                return null;
+        /**
+         * 读取cookies
+         * @param  {[String]} c_name [读取名字]
+         * @return {[String]}        [返回读取cookie的值]
+         */
+        function getCookie(c_name) {
+            var name = c_name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = decodeURIComponent(ca[i].trim());// 解码
+                if (c.indexOf(name) == 0){
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
         }
 
         // 页面加载完毕后从cookie里读取值并填入相应的标签内
