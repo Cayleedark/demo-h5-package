@@ -25,6 +25,7 @@
     <li>loading加载</li>
     <li>上传文件个数控制</li>
     <li>按钮倒计时</li>
+    <li>下拉复选框</li>
 </ol>
 
 <ul>
