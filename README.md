@@ -1,5 +1,6 @@
 ﻿# H5 功能封装 DEMO
 
+## 已发布至博客园
 <ol style="color:#0fffff">
     <li>jQuer插件满屏气泡飘落动画效果</li>
     <li>rem适配</li>
@@ -28,9 +29,9 @@
     <li>下拉复选框</li>
 </ol>
 
+## 未发布至博客园
 <ul>
 	<li>canvas验证码</li>
 	<li>wangEditor</li>
 	<li>本地存储</li>
-	
 </ul>
