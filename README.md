@@ -24,6 +24,7 @@
     <li>获取浏览器滚动距离</li>
     <li>loading加载</li>
     <li>上传文件个数控制</li>
+    <li>按钮倒计时</li>
 </ol>
 
 <ul>
@@ -31,4 +32,5 @@
 	<li>loading加载</li>
 	<li>wangEditor</li>
 	<li>本地存储</li>
+	
 </ul>
