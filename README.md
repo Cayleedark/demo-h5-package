@@ -30,7 +30,6 @@
 
 <ul>
 	<li>canvas验证码</li>
-	<li>loading加载</li>
 	<li>wangEditor</li>
 	<li>本地存储</li>
 	
