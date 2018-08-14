@@ -35,4 +35,5 @@
 	<li>canvas验证码</li>
 	<li>wangEditor</li>
 	<li>本地存储</li>
+    <li>CSS3景深-perspective</li>
 </ul>
