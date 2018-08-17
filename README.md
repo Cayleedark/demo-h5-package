@@ -36,4 +36,5 @@
 	<li>wangEditor</li>
 	<li>本地存储</li>
     <li>CSS3景深-perspective</li>
+    <li>图片转base64</li>
 </ul>
