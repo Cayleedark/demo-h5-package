@@ -28,13 +28,13 @@
     <li>按钮倒计时</li>
     <li>下拉复选框</li>
     <li>评分</li>
+    <li>CSS3景深-perspective</li>
+    <li>图片转base64</li>
+    <li>wangEditor</li>
 </ol>
 
 ## 未发布至博客园
 <ul>
 	<li>canvas验证码</li>
-	<li>wangEditor</li>
 	<li>本地存储</li>
-    <li>CSS3景深-perspective</li>
-    <li>图片转base64</li>
 </ul>
