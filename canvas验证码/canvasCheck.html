@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>canvas验证码</title>
+</head>
+
+<body>
+    <p id="text">随机颜色测试</p>
+    <canvas width="120" height="40" id="check">您的浏览器不支持canvas标签！</canvas>
+    <script>
+        var ctx = document.getElementById("check").getContext("2d");
+        var ctxW = document.getElementById("check").clientWidth;
+        var ctxH = document.getElementById("check").clientHeight;
+        
+        // 产生一个随机数  可设置随机数区间
+        function ranNum(min,max){
+            return Math.random() * (max - min) + min;
+        }
+
+        // 返回一个随机颜色 可设置颜色区间
+        function ranColor(min, max) {
+            var r = ranNum(min,max);
+            var g = ranNum(min,max);
+            var b = ranNum(min,max);
+            // return "rgb(" + r + "," + g + "," + b + ")";
+            return `rgb(${r},${g},${b})`;
+        }
+        
+        // 随机字符串
+        function ranStr(){
+            var str = "QWERTYUIOPASDFGHJKLZXCVBNMqwertyuiopasdfghjklzxcvbnm0123456789";
+            return str.split("").sort(function() { return Math.random() - 0.5 });
+        }
+        
+        // 填充背景
+        function drawCanvas(cId,cW,cH){
+            // 设置canvas背景
+            cId.fillStyle = ranColor(180,230);
+            cId.fillRect(0, 0, cW, cH);
+            // 设置循环显示次数
+            for(var i = 0;i < 4;i++){
+                // 随机字符
+                var rs = ranStr()[Math.floor(ranNum(0,ranStr().length+1))];
+                // 随机字体大小
+                var fs = ranNum(20,40);
+                // 随即旋转文字
+                var deg = ranNum(-30,30);
+                
+                cId.font = fs + 'px  Simhei';
+                ctx.translate(15 * i+20, 10);
+                cId.fillStyle = ranColor(230,250);
+                ctx.rotate(deg * Math.PI / 180);
+                cId.fillText(rs,-10,15);
+                console.log(rs);  
+                console.log(fs);  
+            }
+            // cId.fillText(rs,5,35);
+            
+
+            
+        }
+        drawCanvas(ctx,ctxW,ctxH);
+        
+    </script>
+</body>
+
+</html>
