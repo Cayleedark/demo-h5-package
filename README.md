@@ -31,10 +31,10 @@
     <li>CSS3景深-perspective</li>
     <li>图片转base64</li>
     <li>wangEditor</li>
+    <li>canvas验证码</li>
 </ol>
 
 ## 未发布至博客园
 <ul>
-	<li>canvas验证码</li>
 	<li>本地存储</li>
 </ul>
