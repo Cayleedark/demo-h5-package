@@ -32,7 +32,9 @@
     <li>图片转base64</li>
     <li>wangEditor</li>
     <li>canvas验证码</li>
-    <li>抽奖</li>
+    <li>抽奖(方形)</li>
+    <li>事件冒泡-提示框</li>
+	<li>鼠标特效</li>
 </ol>
 
 ## 未发布至博客园
