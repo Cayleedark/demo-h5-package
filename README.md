@@ -1,8 +1,8 @@
 ﻿# H5 功能封装 DEMO
 
 ## 已发布至博客园
-<ol style="color:#0fffff">
-    <li>jQuer插件满屏气泡飘落动画效果</li>
+<ol color:#0fffff>
+    <li>[jQuer插件满屏气泡飘落动画效果](http://www.baidu.com)</li>
     <li>rem适配</li>
     <li>全屏非全屏互切</li>
     <li>将表格导出为excel</li>
