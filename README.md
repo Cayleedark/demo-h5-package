@@ -40,6 +40,7 @@
     <li>识别设备</li>
     <li>Session过期，跳出iframe框架页显示会话过期页面</li>
     <li>正则去除html字符串中的注释、标签、属性</li>
+    <li>360NEWS接口</li>
 </ol>
 
 ## 未发布至博客园

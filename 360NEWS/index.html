@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>360NEWS接口</title>
+</head>
+<style>
+    ul>li{
+        background-color: orange;
+    }
+    ul>li div p{
+        list-style: none;
+        float: left;
+    }
+    ul li div::after{
+        content: '';
+        clear: both;
+        display: block;
+    }
+    img{
+        width: 120px;
+        margin: 3px;
+        height: 120px;
+    }
+</style>
+<body>
+    <p><label for="kw">关键字</label><input type="text" name="kw" id="kw" placeholder="请输入关键字"></p>
+    <!-- <p><label for="site">搜站点</label><input type="text" name="site" id="site" value="qq.com"></p> -->
+    <button id="btn">提交</button>
+    <div id="title">
+        <ul v-for="(item) in showData.data">
+            <li>
+                <h3><a v-bind:href="item.url" target="_blank">{{item.title}}</a></h3>
+                <p>{{item.content}}</p>
+                <div v-if="item.imageUrls">
+                    <p v-for="(v) in item.imageUrls"><img v-bind:src="v" alt=""></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var vmShowNews = new Vue({
+            el:"#title",
+            data:{
+                showData:{}
+            }
+        })
+        $('#btn').click(function(){
+            $.ajax({
+                url: "news.php",
+                async:false,
+                data: {
+                    kw:$("#kw").val(),
+                    // site:$("#site").val(),
+                    pageToken:"1"
+                },
+                type: "POST",
+                dataType: "json",
+                success: function (data) {
+                    vmShowNews.showData = data; 
+                }
+            });
+        });
+        
+    </script>
+</body>
+
+</html>
