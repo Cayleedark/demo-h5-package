@@ -8,14 +8,14 @@
     <title>360NEWS接口</title>
 </head>
 <style>
-    ul>li{
+    ol>li{
         background-color: orange;
     }
-    ul>li div p{
+    ol>li div p{
         list-style: none;
         float: left;
     }
-    ul li div::after{
+    ol li div::after{
         content: '';
         clear: both;
         display: block;
@@ -31,15 +31,15 @@
     <!-- <p><label for="site">搜站点</label><input type="text" name="site" id="site" value="qq.com"></p> -->
     <button id="btn">提交</button>
     <div id="title">
-        <ul v-for="(item) in showData.data">
-            <li>
+        <ol>
+            <li v-for="(item) in showData.data">
                 <h3><a v-bind:href="item.url" target="_blank">{{item.title}}</a></h3>
                 <p>{{item.content}}</p>
                 <div v-if="item.imageUrls">
                     <p v-for="(v) in item.imageUrls"><img v-bind:src="v" alt=""></p>
                 </div>
             </li>
-        </ul>
+        </ol>
     </div>
     <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
