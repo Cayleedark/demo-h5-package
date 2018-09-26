@@ -1,6 +1,5 @@
 <?php
 $method = "GET";
-// $url = "120.76.205.241:8000/news/qihoo?apikey=cXHbhftNWpcYm2I9tcKQz7qk4I6a28Ag4iKiwDEpVdwcEmuHowdzvkTJ7xjEayIz&kw=".$_POST['kw']."&site=".$_POST['site']."&pageToken=".$_POST['pageToken'];
 $url = "120.76.205.241:8000/news/qihoo?apikey=cXHbhftNWpcYm2I9tcKQz7qk4I6a28Ag4iKiwDEpVdwcEmuHowdzvkTJ7xjEayIz&kw=" . $_POST['kw'] . "&pageToken=" . $_POST['pageToken'];
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_CUSTOMREQUEST, $method);
