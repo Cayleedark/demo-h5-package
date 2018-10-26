@@ -29,6 +29,8 @@ var gameOver = false; // 游戏结束
 var enemy; // 敌人
 var enemyTimer; // 敌人计时器
 var distanceTimer; // 路程计时器
+var cursors; // 按键监听
+
 // 载入资源
 function preload() {
     this.load.image('sky', 'assets/sky.png');
