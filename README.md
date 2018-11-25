@@ -57,4 +57,5 @@
 ## 未发布至博客园
 <ul>
    <li>video功能</li> 
+   <li>获取css样式</li>
 </ul>

@@ -52,22 +52,6 @@
 
 
 /**
- *获取css样式
- */
-
-/*function getStyle(ele, prop) {
-    if (window.getComputedStyle) {
-        return window.getComputedStyle(ele, null)[prop];
-    } else {
-        return ele.currentStyle[prop];
-    }
-}*/
-
-
-/*-----------------------------------------------------------------------------------------------------------------------------------*/
-
-
-/**
  * fixed封装
  */
 
