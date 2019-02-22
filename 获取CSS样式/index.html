@@ -25,6 +25,22 @@
 </style>
 <body>
     <div id="box">ProsperLee</div>
+    <pre>
+        #box{
+            position: absolute;
+            left: 50%;
+            top: 100px;
+            background-color: #fff000;
+            color: blueviolet;
+            font-size: 2em;
+            font-weight: bolder;
+            text-align: center;
+            width: 300px;
+            height: 100px;
+            line-height: 100px;
+            font-style: italic;
+        }
+    </pre>
     <script>
         /**
          * 获取css样式
@@ -39,10 +55,12 @@
             }
         }
         var el = document.getElementById('box');
-        console.log(getStyle(el,'position')); // absolute
-        console.log(getStyle(el,'left')); // 488.5px
-        console.log(getStyle(el,'font-size')); // 32px
-        console.log(getStyle(el,'font-style')); // italic
+        console.log('position：' + getStyle(el,'position')); // absolute
+        console.log('left：' + getStyle(el,'left')); // 488.5px
+        console.log('font-size：' + getStyle(el,'font-size')); // 32px
+        console.log('font-style：' + getStyle(el,'font-style')); // italic
+        console.log('max-width：' + getStyle(el,'max-width')); // none
+        console.log('bottom：' + getStyle(el,'bottom')); // 532px
     </script>
 </body>
 

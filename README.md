@@ -52,12 +52,12 @@
     <li>统计字符串中字符出现的次数</li>
     <li>ES5新增</li>
     <li>Vue脚手架项目搭建</li>
+    <li>将有父子关系的数组对象转换成树形结构数据</li>
+    <li>获取css样式</li>
+    <li>OOCSS(面向对象的CSS)</li>
 </ol>
 
 ## 未发布至博客园
 <ul>
-   <li>video功能</li> 
-   <li>获取css样式</li>
-   <li>公用css整理</li>
-   <li>将有父子关系的数组对象转换成树形结构数据</li>
+   <li>video功能</li>
 </ul>

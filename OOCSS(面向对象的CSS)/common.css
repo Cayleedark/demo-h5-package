@@ -63,6 +63,7 @@ html,body{position: relative;}
 .grid{display: grid;}
 .block{display: block;}
 .inline{display: inline;}
+.webkitbox{display: -webkit-box;}
 
 
 /* 图片填充 */
