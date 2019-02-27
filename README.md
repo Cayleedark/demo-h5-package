@@ -56,6 +56,7 @@
     <li>获取css样式</li>
     <li>OOCSS(面向对象的CSS)</li>
     <li>拖拽文件读取</li>
+    <li>基于element-tree-table树型表格点击节点请求数据</li>
 </ol>
 
 ## 未发布至博客园
