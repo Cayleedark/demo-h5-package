@@ -63,4 +63,5 @@
 <ul>
    <li>video功能</li>
    <li>无缝滚动</li>
+   <li>vue三种监听</li>
 </ul>
