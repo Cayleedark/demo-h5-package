@@ -1,6 +1,4 @@
 ﻿# H5 功能封装 DEMO
-
-## 已发布至博客园
 <ol style="color:#0fffff">
     <li>jQuer插件满屏气泡飘落动画效果</li>
     <li>rem适配</li>
@@ -58,8 +56,6 @@
     <li>拖拽文件读取</li>
     <li>基于element-tree-table树型表格点击节点请求数据</li>
 </ol>
-
-## 未发布至博客园
 <ul>
    <li>video功能</li>
    <li>无缝滚动</li>
